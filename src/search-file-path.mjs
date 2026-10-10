@@ -5,8 +5,8 @@ import { fileURLToPath } from "node:url";
 import { walkPosixPaths } from "@red-cup-engineering/path-walking-service";
 import { sliceFilesByType } from "@red-cup-engineering/file-type-slicing-service";
 import { matchFilenameToken } from "@red-cup-engineering/filename-token-matching-service";
-import { observeMarkdownDocumentIndex } from "@red-cup-engineering/markdown-document-index-observation-service";
-import { matchMarkdownToken } from "@red-cup-engineering/markdown-token-matching-service";
+import { observeMarkdownDocumentIndex } from "@red-cup-engineering/markdown-engineering-services-section/observe-markdown-document-index";
+import { matchMarkdownToken } from "@red-cup-engineering/markdown-engineering-services-section/match-markdown-token";
 
 // This app's own shipped fallback config — always resolvable relative to
 // this module's own file, regardless of the caller's cwd. Package.json
