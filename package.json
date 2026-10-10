@@ -17,10 +17,10 @@
     "node": ">=22"
   },
   "dependencies": {
-    "@red-cup-engineering/filename-token-matching-service": "0.1.0",
+    "@red-cup-engineering/filename-token-matching-service": "workspace:*",
     "@red-cup-engineering/markdown-engineering-services-section": "workspace:*",
-    "@red-cup-engineering/path-walking-service": "1.0.0",
-    "@red-cup-engineering/file-type-slicing-service": "1.0.0",
-    "@red-cup-engineering/dated-state-writing-service": "0.1.0"
+    "@red-cup-engineering/path-walking-service": "workspace:*",
+    "@red-cup-engineering/file-type-slicing-service": "workspace:*",
+    "@red-cup-engineering/dated-state-writing-service": "workspace:*"
   }
 }
