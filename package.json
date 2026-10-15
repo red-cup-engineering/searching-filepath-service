@@ -1,7 +1,7 @@
 {
   "name": "@red-cup-engineering/searching-filepath-service",
   "version": "0.1.1",
-  "private": true,
+  "private": false,
   "type": "module",
   "description": "Streams a token search over a tree as cheapest-first NDJSON: filename matches over configured priority paths, then filename matches over the rest of the root, then markdown frontmatter/title matches, then markdown heading matches. Use to find where to look first before committing to a full-text sweep.",
   "exports": "./src/search-file-path.mjs",
@@ -17,10 +17,17 @@
     "node": ">=22"
   },
   "dependencies": {
-    "@red-cup-engineering/filename-token-matching-service": "workspace:*",
-    "@red-cup-engineering/markdown-engineering-services-section": "workspace:*",
-    "@red-cup-engineering/path-walking-service": "workspace:*",
-    "@red-cup-engineering/file-type-slicing-service": "workspace:*",
-    "@red-cup-engineering/dated-state-writing-service": "workspace:*"
-  }
+    "@red-cup-engineering/filename-token-matching-service": "0.1.0",
+    "@red-cup-engineering/markdown-engineering-services-section": "0.5.1",
+    "@red-cup-engineering/path-walking-service": "0.5.1",
+    "@red-cup-engineering/file-type-slicing-service": "0.1.2",
+    "@red-cup-engineering/dated-state-writing-service": "0.1.2"
+  },
+  "files": [
+    "package.json",
+    "README*",
+    "LICENSE*",
+    "scripts",
+    "src"
+  ]
 }
