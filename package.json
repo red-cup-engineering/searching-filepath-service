@@ -6,8 +6,7 @@
   "description": "Streams a token search over a tree as cheapest-first NDJSON: filename matches over configured priority paths, then filename matches over the rest of the root, then markdown frontmatter/title matches, then markdown heading matches. Use to find where to look first before committing to a full-text sweep.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/red-cup-engineering/computer-filepath-engineering-services-section.git",
-    "directory": "services/searching-filepath-service"
+    "url": "git+https://github.com/red-cup-engineering/searching-filepath-service.git"
   },
   "exports": "./src/search-file-path.mjs",
   "bin": {
