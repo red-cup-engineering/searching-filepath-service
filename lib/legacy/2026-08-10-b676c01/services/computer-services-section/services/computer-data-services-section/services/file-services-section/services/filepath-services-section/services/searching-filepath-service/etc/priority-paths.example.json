@@ -1,0 +1,6 @@
+{
+  "type": "TokenSearchPriorityPaths",
+  "_comment": "Copy this file to etc/priority-paths.json (or point --config at any path) and edit per vault. searching-filepath-service itself carries no hardcoded priority-path or exclude values.",
+  "priorityPaths": ["content", "data/records"],
+  "excludes": ["node_modules", ".git", "legacy", "_archive", "archive", "package-registry*", ".tmp"]
+}

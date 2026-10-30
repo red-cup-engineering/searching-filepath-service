@@ -1,0 +1,27 @@
+{
+  "name": "@red-cup-engineering/searching-filepath-service",
+  "version": "0.1.1",
+  "private": true,
+  "type": "module",
+  "description": "Streams a token search over a tree as cheapest-first NDJSON: filename matches over configured priority paths, then filename matches over the rest of the root, then markdown frontmatter/title matches, then markdown heading matches. Use to find where to look first before committing to a full-text sweep.",
+  "exports": "./src/search-file-path.mjs",
+  "bin": {
+    "search-file-path": "./scripts/search-file-path.mjs"
+  },
+  "scripts": {
+    "check": "node --check src/search-file-path.mjs && node --check scripts/search-file-path.mjs",
+    "test": "node --test test/*.test.mjs",
+    "verify": "npm run check && npm test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@red-cup-engineering/filename-token-matching-service": "0.1.0",
+    "@red-cup-engineering/markdown-document-index-observation-service": "0.1.1",
+    "@red-cup-engineering/markdown-token-matching-service": "0.1.0",
+    "@red-cup-engineering/path-walking-service": "1.0.0",
+    "@red-cup-engineering/file-type-slicing-service": "1.0.0",
+    "@red-cup-engineering/dated-state-writing-service": "0.1.0"
+  }
+}
