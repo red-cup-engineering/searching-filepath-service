@@ -32,7 +32,8 @@
     "README*",
     "LICENSE*",
     "scripts",
-    "src"
+    "src",
+    "etc/priority-paths.example.json"
   ],
   "license": "MIT",
   "funding": {
