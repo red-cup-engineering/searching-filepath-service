@@ -1,0 +1,39 @@
+{
+  "name": "@red-cup-engineering/searching-filepath-service",
+  "version": "0.1.5-dev.0",
+  "private": false,
+  "type": "module",
+  "description": "Streams a token search over a tree as cheapest-first NDJSON: filename matches over configured priority paths, then filename matches over the rest of the root, then markdown frontmatter/title matches, then markdown heading matches. Use to find where to look first before committing to a full-text sweep.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/searching-filepath-service.git"
+  },
+  "exports": "./src/search-file-path.mjs",
+  "bin": {
+    "search-file-path": "./scripts/search-file-path.mjs"
+  },
+  "scripts": {
+    "check": "node --check src/search-file-path.mjs && node --check scripts/search-file-path.mjs",
+    "verify": "npm run check"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@red-cup-engineering/computer-file-engine": "^0.1.1-dev.0",
+    "@red-cup-engineering/computer-file-engineering-services-section": "^0.8.10",
+    "@red-cup-engineering/markdown-engineering-services-section": "^0.5.9"
+  },
+  "files": [
+    "package.json",
+    "README*",
+    "LICENSE*",
+    "scripts",
+    "src"
+  ],
+  "license": "MIT",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/561-group/.github/blob/main/TIPS.md"
+  }
+}
