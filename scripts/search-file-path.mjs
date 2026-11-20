@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { createDatedStateStorage } from "@red-cup-engineering/computer-file-engineering-services-section/dated-state";
+import { createDatedStateCustody } from "@red-cup-engineering/computer-file-engineering-services-section/dated-state";
 
 import { resolvePriorityPathsConfig, stagedTokenSearch } from "../src/search-file-path.mjs";
 
@@ -52,18 +52,18 @@ async function main() {
   const excludes = [...config.excludes, ...args.exclude];
   const options = { caseSensitive: args.caseSensitive, wordBoundary: args.wordBoundary };
 
-  let storage = null;
+  let custody = null;
   let recordedAt = null;
   if (args.record) {
-    storage = createDatedStateStorage({ root: args.record });
+    custody = createDatedStateCustody({ root: args.record });
     recordedAt = new Date().toISOString();
   }
 
   for await (const match of stagedTokenSearch({ token: args.token, root: args.root, priorityPaths: config.priorityPaths, excludes, options })) {
     const line = `${JSON.stringify(match)}\n`;
     const canWriteMore = process.stdout.write(line);
-    if (storage) {
-      await storage.put({ service: "searching-filepath-service", type: "run", extension: "ndjson", recordedAt, bytes: line, append: true });
+    if (custody) {
+      await custody.put({ service: "searching-filepath-service", type: "run", extension: "ndjson", recordedAt, bytes: line, append: true });
     }
     if (!canWriteMore) await new Promise((res) => process.stdout.once("drain", res));
   }
